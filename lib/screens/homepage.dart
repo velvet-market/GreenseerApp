@@ -7,8 +7,8 @@ class HomePage extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
-              title: Text('HOME PAGE'),
-            ),
+                // title: Text('HOME PAGE'),
+                ),
             body: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
                 child: Column(
@@ -16,29 +16,47 @@ class HomePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Cardtile(
-                        key: UniqueKey(),
-                        title: "Recyclable Waste",
-                        items: 10,
-                        maxcap: 15,
-                        wrong: 3,
-                        list: {
-                          "Pizza": 3,
-                          "Cellphone": 2,
-                          "Glass": 4,
-                          "Paper": 2
-                        }),
+                      key: UniqueKey(),
+                      title: "Paper Waste",
+                      items: 10,
+                      maxcap: 15,
+                      wrong: 3,
+                      list: {
+                        "Pizza": 3,
+                        "Cellphone": 2,
+                        "Glass": 4,
+                        "Paper": 2
+                      },
+                      color: "blue",
+                    ),
                     Cardtile(
-                        key: UniqueKey(),
-                        title: "Non-recyclable Waste",
-                        items: 20,
-                        maxcap: 34,
-                        wrong: 7,
-                        list: {
-                          "Pizza": 2,
-                          "Cellphone": 0,
-                          "Glass": 1,
-                          "Paper": 5
-                        })
+                      key: UniqueKey(),
+                      title: "Organic Waste",
+                      items: 20,
+                      maxcap: 34,
+                      wrong: 7,
+                      list: {
+                        "Pizza": 2,
+                        "Cellphone": 0,
+                        "Glass": 1,
+                        "Paper": 5
+                      },
+                      color: "green",
+                    ),
+                    Cardtile(
+                      key: UniqueKey(),
+                      title: "Non-recyclable Waste",
+                      items: 20,
+                      maxcap: 34,
+                      wrong: 7,
+                      list: {
+                        "Pizza": 2,
+                        "Cellphone": 0,
+                        "Glass": 1,
+                        "Paper": 5
+                      },
+                      color: "yellow",
+                    )
                   ],
                 ))));
   }

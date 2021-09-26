@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class Bintitle extends StatefulWidget {
-  Bintitle({Key? key, required this.title}) : super(key: key);
+  Bintitle({Key? key, required this.title, required this.color})
+      : super(key: key);
   String title;
+  String color;
 
   @override
   State<Bintitle> createState() => _BintitleState();
@@ -17,7 +19,7 @@ class _BintitleState extends State<Bintitle> {
       alignment: Alignment.bottomLeft,
       children: [
         Container(
-          child: Image.asset("assets/images/bin.jpg",
+          child: Image.asset("assets/images/${widget.color}.png",
               width: MediaQuery.of(context).size.width,
               height: 100,
               fit: BoxFit.cover),

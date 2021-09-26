@@ -11,15 +11,17 @@ class Cardtile extends StatefulWidget {
   int maxcap;
   int wrong;
   Map<String, dynamic> list;
+  String color;
 
-  Cardtile({
-    Key? key,
-    required this.title,
-    required this.items,
-    required this.maxcap,
-    required this.wrong,
-    required this.list,
-  }) : super(key: key);
+  Cardtile(
+      {Key? key,
+      required this.title,
+      required this.items,
+      required this.maxcap,
+      required this.wrong,
+      required this.list,
+      required this.color})
+      : super(key: key);
 
   @override
   State<Cardtile> createState() => _CardtileState();
@@ -29,6 +31,7 @@ class _CardtileState extends State<Cardtile> {
   @override
   Widget build(BuildContext context) {
     return Card(
+        // color: Colors.grey,
         margin: EdgeInsets.all(15),
         shadowColor: Colors.lightBlue,
         elevation: 8,
@@ -43,6 +46,7 @@ class _CardtileState extends State<Cardtile> {
                 children: [
                   Bintitle(
                     title: widget.title,
+                    color: widget.color,
                   ),
                   Info(
                     key: UniqueKey(),

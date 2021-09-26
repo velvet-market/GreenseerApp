@@ -24,7 +24,7 @@ class _InfoState extends State<Info> {
       decoration: BoxDecoration(
           // color: Colors.lightGreenAccent,
           gradient: LinearGradient(
-            colors: [Colors.blue, Colors.yellowAccent],
+            colors: [Colors.blueAccent, Colors.lightGreen, Colors.yellowAccent],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
