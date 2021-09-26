@@ -21,9 +21,9 @@ class _BintitleState extends State<Bintitle> {
         Container(
           child: Image.asset("assets/images/${widget.color}.png",
               width: MediaQuery.of(context).size.width,
-              height: 100,
+              height: MediaQuery.of(context).size.height,
               fit: BoxFit.cover),
-          height: 120,
+          height: MediaQuery.of(context).size.height / 3,
         ),
         // Fill with data
         Text(
