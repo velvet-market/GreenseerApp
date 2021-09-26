@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
                     Cardtile(
                       key: UniqueKey(),
                       title: "Organic Bin 1",
-                      items: 0,
+                      items: 1,
                       maxcap: 15,
                       wrong: 0,
                       list: {
@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
                     Cardtile(
                       key: UniqueKey(),
                       title: "Plastics Bin 1",
-                      items: 0,
+                      items: 1,
                       maxcap: 10,
                       wrong: 0,
                       list: {

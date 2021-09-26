@@ -41,7 +41,7 @@ class _ItemListState extends State<ItemList> {
     int sum = first + second + third + fourth;
 
     setState(() {
-      if (sum < max) {
+      if (sum < max - 2) {
         first++;
         second = ((first % 2) + 1);
         third = first % 2;

@@ -40,7 +40,7 @@ class _InfoState extends State<Info> {
 
   void updateState() {
     setState(() {
-      if (itemcount < max - 2 && wrongcount <= max / 2) {
+      if (itemcount < max - 2 && wrongcount <= max / 2 + 3) {
         itemcount = itemcount + 2;
         wrongcount = ((itemcount % 2) + 1) * 2;
       }
