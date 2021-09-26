@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class Bintitle extends StatefulWidget {
-  const Bintitle({Key? key}) : super(key: key);
+  Bintitle({Key? key, required this.title}) : super(key: key);
+  String title;
 
   @override
   State<Bintitle> createState() => _BintitleState();
 }
 
 class _BintitleState extends State<Bintitle> {
+// final String title;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -22,10 +25,10 @@ class _BintitleState extends State<Bintitle> {
         ),
         // Fill with data
         Text(
-          'Paper Bin',
+          widget.title,
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: Colors.black87,
             fontSize: 24,
           ),
         ),

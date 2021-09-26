@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
 
-class Info extends StatelessWidget {
-  const Info({Key? key}) : super(key: key);
+// ignore: must_be_immutable
+class Info extends StatefulWidget {
+  int items;
+  int maxcap;
+  int wrong;
+  Info(
+      {Key? key,
+      required this.items,
+      required this.maxcap,
+      required this.wrong})
+      : super(key: key);
+  @override
+  State<Info> createState() => _InfoState();
+}
 
+class _InfoState extends State<Info> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -38,7 +51,7 @@ class Info extends StatelessWidget {
                 height: 1,
               ),
               Text(
-                "10",
+                widget.items.toString(),
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
@@ -61,7 +74,7 @@ class Info extends StatelessWidget {
               height: 1,
             ),
             Text(
-              "3",
+              widget.wrong.toString(),
               style: TextStyle(
                   color: Colors.red, fontWeight: FontWeight.bold, fontSize: 20),
             )
@@ -81,7 +94,7 @@ class Info extends StatelessWidget {
               height: 1,
             ),
             Text(
-              "15",
+              widget.maxcap.toString(),
               style: TextStyle(
                   color: Colors.red, fontWeight: FontWeight.bold, fontSize: 20),
             )

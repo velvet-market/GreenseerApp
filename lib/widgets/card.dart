@@ -4,8 +4,22 @@ import 'package:route52/widgets/info.dart';
 
 import 'itemlist.dart';
 
+// ignore: must_be_immutable
 class Cardtile extends StatefulWidget {
-  const Cardtile({Key? key}) : super(key: key);
+  String title;
+  int items;
+  int maxcap;
+  int wrong;
+  Map<String, dynamic> list;
+
+  Cardtile({
+    Key? key,
+    required this.title,
+    required this.items,
+    required this.maxcap,
+    required this.wrong,
+    required this.list,
+  }) : super(key: key);
 
   @override
   State<Cardtile> createState() => _CardtileState();
@@ -26,6 +40,19 @@ class _CardtileState extends State<Cardtile> {
             padding: EdgeInsets.all(16),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [Bintitle(), Info(), ItemList()])));
+                children: [
+                  Bintitle(
+                    title: widget.title,
+                  ),
+                  Info(
+                    key: UniqueKey(),
+                    items: widget.items,
+                    maxcap: widget.maxcap,
+                    wrong: widget.wrong,
+                  ),
+                  ItemList(
+                    list: widget.list,
+                  )
+                ])));
   }
 }
