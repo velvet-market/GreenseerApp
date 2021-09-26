@@ -23,6 +23,7 @@ class HomePage extends StatelessWidget {
                       maxcap: 13,
                       wrong: 0,
                       list: {
+                        "maxcap": 13,
                         "Pizza": 0,
                         "Cellphone": 0,
                         "Glass": 0,
@@ -37,6 +38,7 @@ class HomePage extends StatelessWidget {
                       maxcap: 15,
                       wrong: 0,
                       list: {
+                        "maxcap": 15,
                         "Pizza": 0,
                         "Cellphone": 0,
                         "Glass": 0,
@@ -51,6 +53,7 @@ class HomePage extends StatelessWidget {
                       maxcap: 10,
                       wrong: 0,
                       list: {
+                        "maxcap": 10,
                         "Pizza": 0,
                         "Cellphone": 0,
                         "Glass": 0,

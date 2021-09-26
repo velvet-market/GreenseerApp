@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 //import 'package:route52/widgets/text_widget.dart';
 
+// ignore: must_be_immutable
 class ItemList extends StatefulWidget {
   Map<String, dynamic> list;
   ItemList({Key? key, required this.list}) : super(key: key);
@@ -15,6 +16,7 @@ class _ItemListState extends State<ItemList> {
   late int second;
   late int third;
   late int fourth;
+  late final int max;
   Timer? timer;
   @override
   void initState() {
@@ -24,6 +26,8 @@ class _ItemListState extends State<ItemList> {
     second = widget.list['Cellphone'];
     third = widget.list['Glass'];
     fourth = widget.list['Paper'];
+    max = widget.list['maxcap'];
+
     timer = Timer.periodic(Duration(seconds: 3), (Timer t) => updateState());
   }
 
@@ -34,9 +38,15 @@ class _ItemListState extends State<ItemList> {
   }
 
   void updateState() {
+    int sum = first + second + third + fourth;
+
     setState(() {
-      first++;
-      second = ((first % 2) + 1);
+      if (sum < max) {
+        first++;
+        second = ((first % 2) + 1);
+        third = first % 2;
+        fourth = third + 1;
+      }
     });
   }
 
