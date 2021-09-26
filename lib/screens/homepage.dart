@@ -5,10 +5,6 @@ import 'package:http/http.dart' as http;
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var trash = 0;
-    for (var i = 0; i < 10; i++) {
-      trash++;
-    }
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
@@ -22,7 +18,7 @@ class HomePage extends StatelessWidget {
                   children: <Widget>[
                     Cardtile(
                       key: UniqueKey(),
-                      title: "Paper Waste",
+                      title: "Paper Bin 1",
                       items: 0,
                       maxcap: 0,
                       wrong: 0,
@@ -36,7 +32,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Cardtile(
                       key: UniqueKey(),
-                      title: "Organic Waste",
+                      title: "Organic Bin 1",
                       items: 0,
                       maxcap: 0,
                       wrong: 0,
@@ -50,7 +46,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Cardtile(
                       key: UniqueKey(),
-                      title: "Non-recyclable Waste",
+                      title: "Plastics Bin 1",
                       items: 0,
                       maxcap: 0,
                       wrong: 0,
