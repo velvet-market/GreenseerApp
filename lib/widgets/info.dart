@@ -24,7 +24,7 @@ class _InfoState extends State<Info> {
       decoration: BoxDecoration(
           // color: Colors.lightGreenAccent,
           gradient: LinearGradient(
-            colors: [Colors.blueAccent, Colors.lightGreen, Colors.yellowAccent],
+            colors: [Colors.blue, Colors.lightBlue],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -42,7 +42,7 @@ class _InfoState extends State<Info> {
               Text(
                 "Items Inside:",
                 style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
@@ -53,7 +53,7 @@ class _InfoState extends State<Info> {
               Text(
                 widget.items.toString(),
                 style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               )
@@ -87,7 +87,9 @@ class _InfoState extends State<Info> {
             Text(
               "Max Capacity:",
               style: TextStyle(
-                  color: Colors.red, fontWeight: FontWeight.bold, fontSize: 20),
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20),
             ),
             SizedBox(
               width: 10,
@@ -96,7 +98,9 @@ class _InfoState extends State<Info> {
             Text(
               widget.maxcap.toString(),
               style: TextStyle(
-                  color: Colors.red, fontWeight: FontWeight.bold, fontSize: 20),
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20),
             )
           ])
         ],
