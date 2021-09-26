@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -16,6 +18,35 @@ class Info extends StatefulWidget {
 }
 
 class _InfoState extends State<Info> {
+  late int itemcount;
+  late int wrongcount;
+  late int max;
+  Timer? timer;
+  @override
+  void initState() {
+    // TODO: implement initState
+
+    itemcount = widget.items;
+    wrongcount = widget.wrong;
+    max = widget.maxcap;
+    timer = Timer.periodic(Duration(seconds: 3), (Timer t) => updateState());
+  }
+
+  @override
+  void dispose() {
+    timer?.cancel();
+    super.dispose();
+  }
+
+  void updateState() {
+    setState(() {
+      if (itemcount < max - 2 && wrongcount <= max / 2) {
+        itemcount = itemcount + 2;
+        wrongcount = ((itemcount % 2) + 1) * 2;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -51,7 +82,7 @@ class _InfoState extends State<Info> {
                 height: 1,
               ),
               Text(
-                widget.items.toString(),
+                itemcount.toString(),
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -74,7 +105,7 @@ class _InfoState extends State<Info> {
               height: 1,
             ),
             Text(
-              widget.wrong.toString(),
+              wrongcount.toString(),
               style: TextStyle(
                   color: Colors.red, fontWeight: FontWeight.bold, fontSize: 20),
             )

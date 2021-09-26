@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
                       key: UniqueKey(),
                       title: "Paper Bin 1",
                       items: 0,
-                      maxcap: 0,
+                      maxcap: 13,
                       wrong: 0,
                       list: {
                         "Pizza": 0,
@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
                       key: UniqueKey(),
                       title: "Organic Bin 1",
                       items: 0,
-                      maxcap: 0,
+                      maxcap: 15,
                       wrong: 0,
                       list: {
                         "Pizza": 0,
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                       key: UniqueKey(),
                       title: "Plastics Bin 1",
                       items: 0,
-                      maxcap: 0,
+                      maxcap: 10,
                       wrong: 0,
                       list: {
                         "Pizza": 0,
